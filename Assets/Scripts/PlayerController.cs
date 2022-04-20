@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
      SpawnManager spawnManager;
     public Transform bulletLaunch;
     Rigidbody rb;
+   
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
             GameObject hitEnemy = hit.collider.gameObject;
             if (hitEnemy.gameObject.tag == "Enemy")
             {
-                //Destroy(hitEnemy);
+                Destroy(hitEnemy);
                 print("Enemy hit");
                 hitEnemy.GetComponent<EnemyController>().EnemyDead();
             }

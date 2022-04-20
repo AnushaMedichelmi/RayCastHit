@@ -17,7 +17,7 @@ public class SpawnManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            Vector3 enemyPosition = new Vector3(Random.Range(-10, 11), 5, Random.Range(10, 11));
+            Vector3 enemyPosition = new Vector3(Random.Range(-4, 4), 1, Random.Range(-4, 4));
             Instantiate(enemyPrefab, enemyPosition, Quaternion.identity);
         }
     }
